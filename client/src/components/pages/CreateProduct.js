@@ -26,10 +26,11 @@ function CreateProduct(props) {
 
         },
       });
-      /*
-      const token = mutationResponse.data.addUser.token;
-      Auth.login(token);
-      */
+      
+      //
+      // const token = mutationResponse.data.addProduct.token;
+      // Auth.login(token);
+      
     };
   
     const handleChange = (event) => {
@@ -79,12 +80,13 @@ function CreateProduct(props) {
           </div>
         
           <div className="flex-row flex-end">
-            <button type="submit">Submit</button>
+           
           </div>
         </form>
       </div>
     );
   
  }
+ //button type="submit">Submit</button>
   export default CreateProduct;
   
