@@ -15,6 +15,8 @@ const Navbar = ({ title, icon}) => {
                 <li><Link to ='/login'>Login</Link></li>
                 <li><Link to ='/signup'>Signup</Link></li>
                 <li><Link to ='/about'>About</Link></li>
+                <li><Link to ='/CreateProduct'>Sell Product</Link></li>
+                
             </ul>
         </div>
     )
