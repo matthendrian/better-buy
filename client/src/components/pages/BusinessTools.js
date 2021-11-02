@@ -7,7 +7,7 @@ import React from 'react'
 //WHEN I make a sale 
 //THEN a counter is triggered named after that category. 
 //WHEN I make a sale
-//THEN I 
+//THEN a price point, label, and date is added to the graph. 
 
 
 //This provides the 1) overall sales number 
@@ -18,7 +18,7 @@ const BusinessTools = () => {
   return (
     <div>
       <Jumbotron>
-        <h1>My Sales!</h1>
+        <h1>My Sales</h1>
       </Jumbotron>
 
       <div class="form">

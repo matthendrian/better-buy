@@ -1,10 +1,14 @@
 import React, {useState, useContext, useEffect} from 'react'
 import AuthContext from '../../context/auth/authContext';
 import AlertContext from '../../context/alert/alertContext'
+//registers a user in the db. 
+//import { ADD_USER } from '../utils/mutations';
 
 const Register = (props) => {
     const authContext = useContext(AuthContext);
     const alertContext = useContext(AlertContext);
+   //uses our mutation to register a user.
+   //  const [addUser] = useMutation(ADD_USER);
 
     const { register, error, clearErrors, isAuthenticated } = authContext;
     const {setAlert} = alertContext;
@@ -33,7 +37,7 @@ const Register = (props) => {
 
     const onSubmit = e => {
         e.preventDefault();
-        console.log('Register submit');
+        console.log('Registation submitted!');
         if (name === '' || email === '' || password === ''){
             setAlert('Please fill all required fiels', 'danger');
         } else if (password !== password2) {
@@ -46,6 +50,21 @@ const Register = (props) => {
             });
         }
     };
+
+
+    /*
+    const mutationResponse = await addUser({
+        variables: {
+          email: formState.email,
+          password: formState.password,
+          firstName: formState.firstName,
+          lastName: formState.lastName,
+        },
+      });
+      const token = mutationResponse.data.addUser.token;
+      Auth.login(token);
+    };
+   */ 
 
     return (
         <div className='form-container'>
